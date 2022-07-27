@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Layout from "../components/layout";
 import NavBar from "../components/navbar";
 
 const Signin = () => {
@@ -20,11 +21,10 @@ const Signin = () => {
 		console.log("clicked!");
 	};
 	return (
-		<>
+		<Layout>
 			<Head>
 				<title>Signin</title>
 			</Head>
-			<NavBar />
 			<Box borderRadius="sm" color="teal">
 				<Flex
 					height="100vh"
@@ -57,7 +57,7 @@ const Signin = () => {
 					</Flex>
 				</Flex>
 			</Box>
-		</>
+		</Layout>
 	);
 };
 export default Signin;

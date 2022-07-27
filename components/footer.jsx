@@ -5,11 +5,15 @@ import {
 	useColorModeValue,
 	SimpleGrid,
 	Text,
+	Image,
+	Input,
+	IconButton,
 } from "@chakra-ui/react";
 import React from "react";
 import Link from "next/link";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
+import { BiMailSend } from "react-icons/bi";
 
 const Footer = () => {
 	return (
@@ -18,7 +22,7 @@ const Footer = () => {
 			color={useColorModeValue("gray.700", "gray.200")}
 		>
 			<Container as={Stack} maxW={"6xl"} py={10}>
-				<SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+				<SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={12}>
 					<Stack align={"flex-start"}>
 						<h2>Company</h2>
 						<Link href={"#"}>About Us</Link>
@@ -27,14 +31,14 @@ const Footer = () => {
 						<Link href={"#"}>Privacy Policy</Link>
 					</Stack>
 
-					<Stack align={"flex-end"}>
+					<Stack align={"flex-start"}>
 						<h2>Helpful Resources</h2>
 						<Link href={"#"}>Contact Us</Link>
 						<Link href={"#"}>Support</Link>
 						<Link href={"#"}>FAQs</Link>
 					</Stack>
 
-					<Stack align={"flex-end"}>
+					<Stack align={"flex-start"}>
 						<h2>Social</h2>
 						<Stack direction={"row"}>
 							<Link href={"/"}>
@@ -54,6 +58,13 @@ const Footer = () => {
 							</Link>
 						</Stack>
 					</Stack>
+					<Stack>
+						<h2>Subscribe</h2>
+						<Stack direction={"row"}>
+							<Input placeholder={"Your email address"} />
+							<IconButton icon={<BiMailSend />} />
+						</Stack>
+					</Stack>
 				</SimpleGrid>
 			</Container>
 
@@ -71,7 +82,15 @@ const Footer = () => {
 					justify={{ md: "space-between" }}
 					align={{ md: "center" }}
 				>
-					<Text>© 2022 Calmly Resolve. All rights reserved</Text>
+					<Box
+						display={"flex"}
+						justifyContent={"space-between"}
+						alignItems={"center"}
+						gap={"4"}
+					>
+						<Image src="/static/logo.svg" alt="Calmly logo" />
+						<Text>© 2022 Calmly Resolve. All rights reserved</Text>
+					</Box>
 				</Container>
 			</Box>
 		</Box>

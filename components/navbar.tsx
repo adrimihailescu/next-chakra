@@ -23,7 +23,7 @@ const NavBar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
-			<Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+			<Box bg={useColorModeValue("gray.100", "gray.900")} m={0}>
 				<Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
 					<Box>
 						<Image src="/static/logo.svg" alt="Calmly logo" />

@@ -5,11 +5,16 @@ const Banner = () => {
 	const router = useRouter();
 	const handleSignIn = (e: any) => {
 		e.preventDefault();
-		router.push("/signin");
+		router.push("/welcome");
 		console.log("clicked!");
 	};
 	return (
-		<Container display={"flex"} justifyContent={"center"} position={"relative"}>
+		<Container
+			display={"flex"}
+			justifyContent={"center"}
+			position={"relative"}
+			m={0}
+		>
 			<Box
 				display={"flex"}
 				justifyContent={"center"}
