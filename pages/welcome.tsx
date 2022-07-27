@@ -12,15 +12,19 @@ import {
 } from "@chakra-ui/react";
 import { PhoneIcon } from "@chakra-ui/icons";
 import Layout from "../components/layout";
+import Head from "next/head";
 
 const Welcome = () => {
 	return (
 		<Layout>
+			<Head>
+				<title>Welcome To Calmly</title>
+			</Head>
 			<VStack align={"flex-start"}>
 				<Box as="h2" fontSize={"30px"} pt={160} fontWeight={"bold"}>
 					Welcome to Calmly
 				</Box>
-				<Text>We will send you a 6-digit verification code</Text>
+				<Text pb={"60px"}>We will send you a 6-digit verification code</Text>
 
 				<Text>Enter your phone number</Text>
 				<Stack spacing={4}>

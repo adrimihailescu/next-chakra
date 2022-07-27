@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 			</Head>
 			<NavBar />
 			<Box>
-				<Banner />
+				{/* <Banner /> */}
 				<main>Body of the homepage</main>
 			</Box>
 			<Footer />

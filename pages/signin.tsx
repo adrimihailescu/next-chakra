@@ -51,7 +51,12 @@ const Signin = () => {
 							mb={6}
 							type="password"
 						/>
-						<Button colorScheme="teal" mb={6} onClick={handleSignIn}>
+						<Button
+							backgroundColor={"teal.500"}
+							color={"white"}
+							mb={6}
+							onClick={handleSignIn}
+						>
 							Sign In
 						</Button>
 					</Flex>
