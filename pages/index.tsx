@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar";
 import Banner from "../components/banner";
+import Footer from "../components/footer";
+import { Box } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
 	return (
@@ -16,10 +17,12 @@ const Home: NextPage = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div>
-				<NavBar />
-				<Banner />
-			</div>
+			<NavBar />
+			<Box>
+				{/* <Banner /> */}
+				<main>Body of the homepage</main>
+			</Box>
+			<Footer />
 		</div>
 	);
 };
