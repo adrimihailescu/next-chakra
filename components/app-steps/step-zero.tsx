@@ -11,24 +11,20 @@ import {
 	Button,
 } from "@chakra-ui/react";
 import { PhoneIcon } from "@chakra-ui/icons";
-import Layout from "../components/layout";
-import Head from "next/head";
+import { stepProps } from "./types";
 
-const Welcome = () => {
+const StepZero: React.FC<stepProps> = ({ stepHandler }) => {
 	return (
-		<Layout>
-			<Head>
-				<title>Welcome To Calmly</title>
-			</Head>
+		<div>
 			<VStack align={"flex-start"}>
 				<Box as="h2" fontSize={"30px"} pt={160} fontWeight={"bold"}>
 					Welcome to Calmly
 				</Box>
 				<Text pb={"60px"}>We will send you a 6-digit verification code</Text>
 
-				<Text>Enter your phone number</Text>
+				<Text>Enter your mobile number</Text>
 				<Stack spacing={4}>
-					<InputGroup>
+					<InputGroup width={"100%"}>
 						<InputLeftElement
 							pointerEvents="none"
 							// eslint-disable-next-line react/no-children-prop
@@ -36,13 +32,18 @@ const Welcome = () => {
 						/>
 						<Input type="tel" placeholder="Phone number" />
 					</InputGroup>
-					<Button width={"100%"} backgroundColor={"teal.500"} color={"white"}>
+					<Button
+						width={"100%"}
+						backgroundColor={"teal.500"}
+						color={"white"}
+						onClick={() => stepHandler(1)}
+					>
 						Continue
 					</Button>
 				</Stack>
 			</VStack>
-		</Layout>
+		</div>
 	);
 };
 
-export default Welcome;
+export default StepZero;

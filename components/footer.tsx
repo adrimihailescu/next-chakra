@@ -62,7 +62,7 @@ const Footer = () => {
 						<h2>Subscribe</h2>
 						<Stack direction={"row"}>
 							<Input placeholder={"Your email address"} />
-							<IconButton icon={<BiMailSend />} />
+							<IconButton icon={<BiMailSend />} aria-label={""} />
 						</Stack>
 					</Stack>
 				</SimpleGrid>
