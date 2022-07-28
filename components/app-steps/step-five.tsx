@@ -6,13 +6,6 @@ const StepFive: React.FC<stepProps> = ({ stepHandler }) => {
 	return (
 		<Box>
 			<Text>Step Five</Text>
-			<Button
-				backgroundColor={"teal.500"}
-				color={"white"}
-				onClick={() => stepHandler(0)}
-			>
-				Continue
-			</Button>
 		</Box>
 	);
 };

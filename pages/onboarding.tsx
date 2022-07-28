@@ -39,7 +39,14 @@ const Welcome = () => {
 			<Head>
 				<title>Welcome To Calmly</title>
 			</Head>
-			{activeComponent >= 2 && <ProgressBar />}
+			{activeComponent > 0 && (
+				<ProgressBar
+					start={1}
+					end={5}
+					current={activeComponent}
+					stepHandler={setActiveComponent}
+				/>
+			)}
 			{stepSwitch(activeComponent, setActiveComponent)}
 		</Layout>
 	);
