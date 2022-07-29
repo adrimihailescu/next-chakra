@@ -41,10 +41,12 @@ const StepZero: React.FC<stepProps> = ({ stepHandler }) => {
 								<Input type="tel" placeholder="Phone number" />
 							</InputGroup>
 							<Button
-								width={"100%"}
-								backgroundColor={"teal.500"}
+								backgroundColor={"#319795"}
 								color={"white"}
 								onClick={() => stepHandler(1)}
+								borderRadius={"6px"}
+								height={"48px"}
+								width={"380px"}
 							>
 								Continue
 							</Button>

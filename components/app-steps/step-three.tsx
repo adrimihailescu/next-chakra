@@ -2,14 +2,14 @@ import React from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
 import { stepProps } from "./types";
 
-const StepThree: React.FC<stepProps> = ({ stepHandler }) => {
+const StepThree: React.FC<stepProps> = ({ stepHandler, currentStep }) => {
 	return (
 		<Box>
 			<Text>Step Three</Text>
 			<Button
 				backgroundColor={"teal.500"}
 				color={"white"}
-				onClick={() => stepHandler(4)}
+				onClick={() => stepHandler(currentStep + 1)}
 			>
 				Continue
 			</Button>

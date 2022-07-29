@@ -5,7 +5,7 @@ import { progressProps } from "./types";
 const ProgressBar: React.FC<progressProps> = ({
 	start,
 	end,
-	current,
+	currentStep,
 	stepHandler,
 }) => {
 	const progressBarValues = Array.from(
@@ -18,7 +18,7 @@ const ProgressBar: React.FC<progressProps> = ({
 			variant={"soft-rounded"}
 			align={"center"}
 			pt={"20px"}
-			index={current - start}
+			index={currentStep - start}
 		>
 			<TabList>
 				{progressBarValues.map((step, index) => {

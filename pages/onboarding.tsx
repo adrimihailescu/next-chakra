@@ -11,43 +11,43 @@ import ProgressBar from "../components/app-steps/progress-bar";
 import StepFive from "../components/app-steps/step-five";
 
 const stepSwitch = (
-	step: number,
+	currentStep: number,
 	stepHandler: React.Dispatch<React.SetStateAction<number>>
 ) => {
-	switch (step) {
+	switch (currentStep) {
 		case 1:
-			return <StepOne stepHandler={stepHandler} />;
+			return <StepOne stepHandler={stepHandler} currentStep={currentStep} />;
 		case 2:
-			return <StepTwo stepHandler={stepHandler} />;
+			return <StepTwo stepHandler={stepHandler} currentStep={currentStep} />;
 		case 3:
-			return <StepThree stepHandler={stepHandler} />;
+			return <StepThree stepHandler={stepHandler} currentStep={currentStep} />;
 		case 4:
-			return <StepFour stepHandler={stepHandler} />;
+			return <StepFour stepHandler={stepHandler} currentStep={currentStep} />;
 		case 5:
-			return <StepFive stepHandler={stepHandler} />;
+			return <StepFive stepHandler={stepHandler} currentStep={currentStep} />;
 		case 0:
 		default:
-			return <StepZero stepHandler={stepHandler} />;
+			return <StepZero stepHandler={stepHandler} currentStep={currentStep} />;
 	}
 };
 
 const Welcome = () => {
-	const [activeComponent, setActiveComponent] = useState<number>(1);
+	const [currentStep, setCurrentStep] = useState<number>(1);
 
 	return (
 		<Layout>
 			<Head>
 				<title>Welcome To Calmly</title>
 			</Head>
-			{activeComponent > 0 && (
+			{currentStep > 0 && (
 				<ProgressBar
 					start={1}
 					end={5}
-					current={activeComponent}
-					stepHandler={setActiveComponent}
+					currentStep={currentStep}
+					stepHandler={setCurrentStep}
 				/>
 			)}
-			{stepSwitch(activeComponent, setActiveComponent)}
+			{stepSwitch(currentStep, setCurrentStep)}
 		</Layout>
 	);
 };
