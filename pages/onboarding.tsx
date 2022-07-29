@@ -32,7 +32,7 @@ const stepSwitch = (
 };
 
 const Welcome = () => {
-	const [activeComponent, setActiveComponent] = useState<number>(0);
+	const [activeComponent, setActiveComponent] = useState<number>(1);
 
 	return (
 		<Layout>

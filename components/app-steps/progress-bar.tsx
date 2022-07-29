@@ -18,7 +18,7 @@ const ProgressBar: React.FC<progressProps> = ({
 			variant={"soft-rounded"}
 			align={"center"}
 			pt={"20px"}
-			index={current - 1}
+			index={current - start}
 		>
 			<TabList>
 				{progressBarValues.map((step, index) => {
