@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Next Chakra Ui</title>
+        <title>Next Chakra Ui another test</title>
         <meta
           name="description"
           content="Playground app for next.js and chakra UI"
