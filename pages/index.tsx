@@ -7,24 +7,24 @@ import Footer from "../components/footer";
 import { Box } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
-	return (
-		<div>
-			<Head>
-				<title>Next Chakra</title>
-				<meta
-					name="description"
-					content="Playground app for next.js and chakra UI"
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<NavBar />
-			<Box>
-				{/* <Banner /> */}
-				<main>Body of the homepage</main>
-			</Box>
-			<Footer />
-		</div>
-	);
+  return (
+    <div>
+      <Head>
+        <title>Next Chakra Ui</title>
+        <meta
+          name="description"
+          content="Playground app for next.js and chakra UI"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <NavBar />
+      <Box>
+        {/* <Banner /> */}
+        <main>Body of the homepage</main>
+      </Box>
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;
